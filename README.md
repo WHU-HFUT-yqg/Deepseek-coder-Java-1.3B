@@ -13,7 +13,7 @@ conda create --name Deepseek-coder-Java-1.3B
 conda activate Deepseek-coder-Java-1.3B
 
 cd data
-python data/new_process_data.py --input_path /path/to/your/input_data --output_path /path/to/your/output_file.json --cache_dir /path/to/cache_dir --max_samples_per_code 3
+python new_process_data.py --input_path /path/to/your/input_data --output_path /path/to/your/output_file.json --cache_dir /path/to/cache_dir --max_samples_per_code 3
 ```
 
 The final data will be created as an Alpaca format so that you can train  your own model with this.
@@ -35,8 +35,7 @@ pip install -e ".[torch,metrics]" --no-build-isolation
 train the model 
 
 ```
-llamafactory-cli deepseek-coder-1.3B_lora_sft.yaml
+llamafactory-cli ../train_config/deepseek-coder-1.3B_lora_sft.yaml
 ```
-
 
 
