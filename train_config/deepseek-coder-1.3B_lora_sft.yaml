@@ -1,1 +1,41 @@
+#train
+bf16: true
+cutoff_len: 2048
+dataset: DeepseekCoder_train
+dataset_dir: data
+ddp_timeout: 180000000
+do_train: true
+eval_steps: 1000
+eval_strategy: steps
+finetuning_type: lora
+flash_attn: auto
+gradient_accumulation_steps: 8
+include_num_input_tokens_seen: true
+learning_rate: 1.0e-05
+logging_steps: 5
+lora_alpha: 16
+lora_dropout: 0
+lora_rank: 8
+lora_target: all
+lr_scheduler_type: cosine
+max_grad_norm: 1.0
+max_samples: 100000
+model_name_or_path: /home/gy123456yqg/AI_Competition/model
+num_train_epochs: 1.0
+optim: adamw_torch
+output_dir: saves/DeepSeek-Coder-6.7B-Base/lora/train_2025-05-11-21-39-15
+packing: false
+per_device_eval_batch_size: 4
+per_device_train_batch_size: 4
+plot_loss: true
+preprocessing_num_workers: 16
+report_to: none
+save_steps: 1000
+stage: sft
+template: default
+trust_remote_code: true
+val_size: 0.3
+warmup_steps: 0
+
+
 
